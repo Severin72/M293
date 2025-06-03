@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-title">
+            <h1>Portfolio</h1>
+        </div>
+        <div class="hamburger">&#9776;</div>
+        <nav class="menu">
+            <a href="index.html">Über Mich</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="faehigkeiten.html">Fähigkeiten</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="portfolio-slider">
+            <!-- Ich benutze hier nochmas einen Div, falls ich irgendwann mit mehr als 3 Projekten weitermachen möchte. -->
+            <div class="projekt-slide">
+                <div class="projekt-container">
+                    <div class="bild-container">
+                        <img src="Projekte/zuckerwatten.png" alt="Projekt 1" />
+                    </div>
+                    <div class="text-container">
+                        <p>In diesem Projekt habe ich eine HMTL Webseite erstellt, welche einen Online-Laden
+                            darstellen sollte.
+                            Ich habe mich bei diesem Projekt für einen Zuckerwatte-Laden entschieden.</p>
+                    </div>
+                </div>
+                <div class="projekt-container">
+                    <div class="bild-container">
+                        <img src="Projekte/clubverwaltung.png" alt="Projekt 2" />
+                    </div>
+                    <div class="text-container">
+                        <p>Bei diesem Projekt habe ich mit PHP, CSS und HTML eine Clubverwaltung erstellt, bei
+                            welcher ich
+                            meine Members verwalten kann, neue Members einfügen kann und diesen Members auch ein
+                            Event zugewiesen
+                            habe.</p>
+                    </div>
+                </div>
+                <div class="projekt-container">
+                    <div class="bild-container">
+                        <img src="Projekte/rechner.png" alt="Projekt 3" />
+                    </div>
+                    <div class="text-container">
+                        <p>Bei diesem Projekt habe ich einen einfachen Rechner mit JavaScript erstellt, bei
+                            welchem sich ein
+                            Balken anhand des Resultats der Rechnung bewegt. Dieses Projekt ist nicht besonders
+                            schön geworden.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="heutiges-datum"></p>
+        <p>|</p>
+        <p>Modul 293</p>
+        <p>|</p>
+        <p>©Severin Keller</p>
+    </footer>
+
+    <script>
+        (function setzeDatum() {
+            const heute = new Date();
+            const dd = String(heute.getDate()).padStart(2, '0');
+            const mm = String(heute.getMonth() + 1).padStart(2, '0');
+            const yyyy = heute.getFullYear();
+            document.querySelector('.heutiges-datum').textContent = `${dd}.${mm}.${yyyy}`;
+        })();
+
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            const menu = document.querySelector('.menu');
+            menu.style.display = (menu.style.display === 'flex') ? 'none' : 'flex';
+        });
+    </script>
+</body>
+
+</html>

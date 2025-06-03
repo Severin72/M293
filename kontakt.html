@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Kontakt</title>
+  <link rel="stylesheet" href="kontakt.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-title">
+      <h1>Kontakt</h1>
+    </div>
+    <div class="hamburger">&#9776;</div>
+    <nav class="menu">
+      <a href="index.html">Über Mich</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="faehigkeiten.html">Fähigkeiten</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="oberer_abteil">
+      <h2>Kontaktformular</h2>
+      <form class="form-container" action="sendeemail.php" method="POST">
+        <input type="email" name="email" placeholder="Email - Adresse" required>
+        <textarea name="bemerkung" placeholder="Bemerkung" required></textarea>
+        <button type="submit">Abschicken</button>
+      </form>
+    </div>
+
+    <div class="unterer_abteil">
+      <h2>Soziale Netzwerke / Informationen</h2>
+      <div class="unterer-content">
+        <div class="socials-container">
+          <div class="icon-text">
+            <a href="https://www.tiktok.com" target="_blank">
+            <img src="Hobbies/tiktok.png" alt="TikTok">
+            </a>
+            <span><a href="https://www.tiktok.com/" target="_blank">@severinkeller8</a></span>
+          </div>
+          <div class="icon-text">
+            <a href="https://www.instagram.com/" target="_blank">
+            <img src="Hobbies/insta.png" alt="Instagram">
+            </a>
+            <span><a href="https://www.instagram.com/" target="_blank">@severinkeller8</a></span>
+          </div>
+          <div class="icon-text" id="snapchat">
+            <a href="https://www.snapchat.com/" target="_blank">
+            <img src="Hobbies/snapchat.png" alt="SnapChat">
+            </a>
+            <span><a href="https://www.snapchat.com/" target="_blank">@severinkeller8</a></span>
+          </div>
+        </div>
+        <div class="rechter-content">
+          <div class="icon-text">
+            <a href="https://www.facebook.com/" target="_blank">
+            <img src="Hobbies/facebook.png" alt="FaceBook">
+            </a>
+            <span><a href="https://www.facebook.com/" target="_blank">@severinkeller8</a></span>
+          </div>
+          <div class="contact-info">
+            <p><strong>Email: </strong><a href="mailto:severin.keller@edu.gbssg.ch">severin.keller@edu.gbssg.ch</a></p>
+            <p><strong>Telefon:</strong> <a href="tel:+775357986"> 077 535 79 86</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p class="heutiges-datum"></p>
+    <p>|</p>
+    <p>Modul 293</p>
+    <p>|</p>
+    <p>©Severin Keller</p>
+  </footer>
+
+  <script>
+    (function setzeDatum() {
+      const heute = new Date();
+      const dd = String(heute.getDate()).padStart(2, '0');
+      const mm = String(heute.getMonth() + 1).padStart(2, '0');
+      const yyyy = heute.getFullYear();
+      document.querySelector('.heutiges-datum').textContent = `${dd}.${mm}.${yyyy}`;
+    })();
+
+    document.querySelector('.hamburger').addEventListener('click', () => {
+      const menu = document.querySelector('.menu');
+      if (menu.style.display === 'flex') {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
+    });
+  </script>
+</body>
+
+</html>

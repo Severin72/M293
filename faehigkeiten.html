@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Fähigkeiten</title>
+    <link rel="stylesheet" href="faehigkeiten.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-title">
+            <h1>Fähigkeiten</h1>
+        </div>
+        <div class="hamburger">&#9776;</div>
+        <nav class="menu">
+            <a href="index.html">Über Mich</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="faehigkeiten.html">Fähigkeiten</a>
+            <a href="kontakt.html">Kontakt</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="oberer_abteil">
+            <h2>Fähigkeiten</h2>
+            <div class="list-container">
+                <ul>
+                    <li>HTML: Ich kann schon einiges mit HTML programmieren und mache auch diese Seite damit.</li>
+                    <br>
+                    <li>CSS: Auch in CSS bin ich nicht sehr schlecht.</li>
+                    <br>
+                    <li>JavaScript: Ich habe mit JavaScript schon gearbeitet und einen Rechner erstellt.</li>
+                    <br>
+                    <li>PHP: Ich habe mit PHP/HTML und CSS eine Clubverwaltung programmiert.</li>
+                    <br>
+                    <li>Java: Ich habe auch mit Java und SceneBuilder eine Clubverwaltung programmiert.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="unterer_abteil">
+            <h2>Stärken</h2>
+            <div class="list-container">
+                <ul>
+                    <li>Sozial: Ich komme gut mit Menschen aus.</li>
+                    <br>
+                    <li>Eigenständig: Ich arbeite eigenständig und übernehme Verantwortung für meine Entscheidungen.
+                    </li>
+                    <br>
+                    <li>Lernbereit: Ich lerne schnell und eigne mir neue Technologien mit Begeisterung an.</li>
+                    <br>
+                    <li>Strukturiert: Ich arbeite strukturiert und behalte auch in komplexen Situationen den Überblick.
+                    </li>
+                    <br>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="heutiges-datum"></p>
+        <p>|</p>
+        <p>Modul 293</p>
+        <p>|</p>
+        <p>©Severin Keller</p>
+    </footer>
+    <script>
+        (function setzeDatum() {
+            const heute = new Date();
+            const dd = String(heute.getDate()).padStart(2, '0');
+            const mm = String(heute.getMonth() + 1).padStart(2, '0');
+            const yyyy = heute.getFullYear();
+            document.querySelector('.heutiges-datum').textContent = `${dd}.${mm}.${yyyy}`;
+        })();
+
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            const menu = document.querySelector('.menu');
+            if (menu.style.display === 'flex') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'flex';
+            }
+        });
+    </script>
+</body>
+
+</html>
