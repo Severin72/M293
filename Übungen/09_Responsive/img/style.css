@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    transition: background-color 0.5s ease;
+}
+  
+@media (max-width: 500px) {
+    body { background-color: #ffdddd; }
+}
+ 
+@media (min-width: 501px) and (max-width: 580px) {
+    body { background-color: #ffe4b5; }
+}
+ 
+@media (min-width: 581px) and (max-width: 660px) {
+    body { background-color: #ffffcc; }
+}
+ 
+@media (min-width: 661px) and (max-width: 720px) {
+    body { background-color: #ccffcc; }
+}
+ 
+@media (min-width: 721px) and (max-width: 800px) {
+    body { background-color: #ccffff; }
+}
+ 
+@media (min-width: 801px) and (max-width: 880px) {
+    body { background-color: #ccccff; }
+}
+ 
+@media (min-width: 881px) and (max-width: 960px) {
+    body { background-color: #e0ccff; }
+}
+ 
+@media (min-width: 961px) and (max-width: 1040px) {
+    body { background-color: #f4ccff; }
+}
+ 
+@media (min-width: 1041px) and (max-width: 1120px) {
+    body { background-color: #ffcce0; }
+}
+ 
+@media (min-width: 1121px) and (max-width: 1250px) {
+    body { background-color: #ffe0cc; }
+}
+ 
+@media (min-width: 1251px) and (max-width: 1300px) {
+    body { background-color: #fff0b3; }
+}
+ 
+@media (min-width: 1301px) and (max-width: 1400px) {
+    body { background-color: #e6ffcc; }
+}
+ 
+@media (min-width: 1401px) {
+    body { background-color: #849c6b; }
+}
+  
